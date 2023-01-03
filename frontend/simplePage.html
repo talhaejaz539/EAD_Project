@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Page</title>
+    <style>
+        .main-content div{
+            height: 20rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row gy-md-5 border">
+            <!-- Header Here -->
+            <div class="col-12">
+                <div class="row border">
+                    <div class="col-md-2 bg-info">Logo Here</div>
+                    <div class="col-md-3 offset-md-2 bg-warning">Website Name</div>
+                    <div class="col-auto ms-auto">
+                        <input type="text" placeholder="Search Here">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content Here -->
+            <div class="col-12">
+                <div class="row border main-content">
+                    <div class="col-md-2 mx-md-5 bg-info">Div-1</div>
+                    <div class="col-md-2 mx-md-5 bg-warning">Div-2</div>
+                    <div class="col-md-2 mx-md-5 bg-secondary">Div-3</div>
+                    <div class="col-md-2 mx-md-5 bg-success">Div-4</div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row border justify-content-evenly main-content">
+                    <div class="col-md-2 bg-info">Div-1</div>
+                    <div class="col-md-2 bg-warning">Div-2</div>
+                    <div class="col-md-2 bg-secondary">Div-3</div>
+                    <div class="col-md-2 bg-success">Div-4</div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Here -->
+        <div class="row mt-md-5 justify-content-md-center justify-content-lg-evenly display-6">
+            <div class="col-md-5 bg-info">Footer Text 1(Address)</div>
+            <div class="col-md-5 bg-success">Footer Text 2(Contact Info)</div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>

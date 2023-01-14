@@ -31,105 +31,108 @@
                 <div id="header"></div>
             </div>
         </div>
-
-        <div class="row mt-5">
-            <div class="container-xl">
-                <div class="table-responsive">
-                    <div class="table-wrapper">
-                        <div class="table-title">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <h2>Manage <b>Request</b></h2>
-                                </div>
-                                <div class="col-sm-6">
-                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Request</span></a>
-                                    <!-- <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						 -->
-                                </div>
+        <div class="row mt-5 ">
+            <div class="container-fluid">    
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>Manage <b>Request</b></h2>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Request</span></a>
+                                <!-- <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						 -->
                             </div>
                         </div>
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="selectAll">
-                                            <label for="selectAll"></label>
-                                        </span> -->
-                                    </th>
-                                    <th>Required Blood Group</th>
-                                    <th>Hospital Name</th>
-                                    <th>Requester Name</th>
-                                    <th>Requester Roll No</th>
-                                    <th>Requester Phone</th>
-                                    <th>Case</th>
-                                    <th>Attendant Name</th>
-                                    <th>Attendant Phone</th>
-                                    <th>Time and Date</th>
-                                    <th>Pick and Drop</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                            <label for="checkbox1"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>A positive</td>
-                                    <td>Shaykh zayed,lahore</td>
-                                    <td>Junaid alam</td>
-                                    <td>BCSF19A545</td>
-                                    <td>03334528714</td>
-                                    <td>Fractures</td>
-                                    <td>Junaid</td>
-                                    <td>03334578958</td>
-                                    <td>12/jan/21</td>
-                                    <td>YES</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox2" name="options[]" value="1">
-                                            <label for="checkbox2"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>A positive</td>
-                                    <td>Shaykh zayed,lahore</td>
-                                    <td>Junaid alam</td>
-                                    <td>BCSF19A545</td>
-                                    <td>03334528714</td>
-                                    <td>Fractures</td>
-                                    <td>Junaid</td>
-                                    <td>03334578958</td>
-                                    <td>12/jan/21</td>
-                                    <td>Yes</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr> 
-                            </tbody>
-                        </table>
-                        <div class="clearfix">
-                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                            <ul class="pagination">
-                                <li class="page-item disabled"><a href="#">Previous</a></li>
-                                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                            </ul>
-                        </div>
                     </div>
-                </div>        
+                    <table class="table table-responsive table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <!-- <span class="custom-checkbox">
+                                        <input type="checkbox" id="selectAll">
+                                        <label for="selectAll"></label>
+                                    </span> -->
+                                </th>
+                                <th>Required Blood Group</th>
+                                <th>Hospital Name</th>
+                                <th>Requester Name</th>
+                                <th>Requester Roll No</th>
+                                <th>Requester Phone</th>
+                                <th>Case</th>
+                                <th>Attendant Name</th>
+                                <th>Attendant Phone</th>
+                                <th>Time and Date</th>
+                                <th>Pick and Drop</th>
+                                <th>Donor Name</th>
+                                <th>Donor Contact</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <!-- <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                        <label for="checkbox1"></label>
+                                    </span> -->
+                                </td>
+                                <td>A positive</td>
+                                <td>Shaykh zayed,lahore</td>
+                                <td>Junaid alam</td>
+                                <td>BCSF19A545</td>
+                                <td>03334528714</td>
+                                <td>Fractures</td>
+                                <td>Junaid</td>
+                                <td>03334578958</td>
+                                <td>12/jan/21</td>
+                                <td>YES</td>
+                                <td>Talha</td>
+                                <td>0322342</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td>
+                                <!-- <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                                    <label for="checkbox2"></label>
+                                    </span> -->
+                                </td>
+                                <td>A positive</td>
+                                <td>Shaykh zayed,lahore</td>
+                                <td>Junaid alam</td>
+                                <td>BCSF19A545</td>
+                                <td>03334528714</td>
+                                <td>Fractures</td>
+                                <td>Junaid</td>
+                                <td>03334578958</td>
+                                <td>12/jan/21</td>
+                                <td>Yes</td>
+                                <td>juniad</td>
+                                <td>03124567876</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                    <div class="clearfix">
+                        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a href="#">Previous</a></li>
+                            <li class="page-item"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">4</a></li>
+                            <li class="page-item"><a href="#" class="page-link">5</a></li>
+                            <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <!-- Edit Modal HTML -->
             <div id="addEmployeeModal" class="modal fade">

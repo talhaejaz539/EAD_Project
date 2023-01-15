@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\PUCIT\7th Semester\EAD\Project\EAD_Project\backend\Blood_Management_System\Blood_Management_System
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/BloodRequest/BloodManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvb2RSZXF1ZXN0XEJsb29kTWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/BloodRequest/BloodOrganizer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvb2RSZXF1ZXN0XEJsb29kT3JnYW5pemVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Donor/DataManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ub3JcRGF0YU1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,16 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Member/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXEluZGV4LmNzaHRtbA==
+[E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Member/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Member/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXEhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Shared/Header.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/PUCIT/7th Semester/EAD/Project/EAD_Project/backend/Blood_Management_System/Blood_Management_System/Views/Shared/_ValidationScriptsPartial.cshtml]

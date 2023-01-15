@@ -4,7 +4,12 @@ namespace Blood_Management_System.Controllers
 {
     public class BloodRequestController : Controller
     {
-        public IActionResult Index()
+        public IActionResult BloodManager()
+        {
+            return View();
+        }
+
+        public IActionResult BloodOrganizer()
         {
             return View();
         }

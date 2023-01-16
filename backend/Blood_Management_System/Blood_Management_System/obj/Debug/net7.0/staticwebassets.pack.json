@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\image\\blood.ico",
+      "PackagePath": "staticwebassets\\image\\blood.ico"
+    },
+    {
+      "Id": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\image\\blood.png",
+      "PackagePath": "staticwebassets\\image\\blood.png"
+    },
+    {
       "Id": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

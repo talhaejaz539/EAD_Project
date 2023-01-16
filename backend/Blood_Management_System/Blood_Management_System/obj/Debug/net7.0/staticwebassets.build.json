@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0lzFCE2+qm5zPt/vmBZBGtRgu0dsn/p7Imp02m0UmKk=",
+  "Hash": "stf3xCi500PIWOUrH3fVa7/gtZGLLzheFGAWrBFyCcM=",
   "Source": "Blood_Management_System",
   "BasePath": "_content/Blood_Management_System",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\image\\blood.ico",
+      "SourceId": "Blood_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\",
+      "BasePath": "_content/Blood_Management_System",
+      "RelativePath": "image/blood.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\blood.ico"
+    },
+    {
+      "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\image\\blood.png",
+      "SourceId": "Blood_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\",
+      "BasePath": "_content/Blood_Management_System",
+      "RelativePath": "image/blood.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\blood.png"
     },
     {
       "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\js\\site.js",

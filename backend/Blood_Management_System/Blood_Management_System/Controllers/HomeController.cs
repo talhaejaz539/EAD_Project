@@ -6,9 +6,16 @@ namespace Blood_Management_System.Controllers
 {
     public class HomeController : Controller
     {
-        public ViewResult Index()
+        public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public void authenticateUser(Member m)
+        {
+            Console.WriteLine(m.Email);
+            Console.WriteLine(m.Password);
         }
     }
 }

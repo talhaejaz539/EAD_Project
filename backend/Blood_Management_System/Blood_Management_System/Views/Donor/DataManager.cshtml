@@ -97,11 +97,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Edit Modal HTML -->
+            <!-- Add Modal HTML -->
             <div id="addEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form>
+                        <form action="/Donor/addDonor" method="post">
                             <div class="modal-header">
                                 <h4 class="modal-title">Add Donor</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -109,31 +109,31 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="Name" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Roll No</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="RollNo" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Phone</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="PhoneNo" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Temporary Address</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="TemporaryAddress" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Permanent Address</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="PermanentAddress" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Last Donation</label>
-                                    <input type="date" class="form-control" required>
+                                    <input type="date" name="LastDonationDate" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Blood Group</label>
-                                    <select name="bloodgroup">
+                                    <select name="BloodGroup">
                                         <option value="A Positive">A Positive</option>
                                         <option value="B Positive">B Positive</option>
                                         <option value="O Positive">O Positive</option>
@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Active</label>
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                    <input type="checkbox" id="checkbox5" name="Status" value="1">
                                     <label for="checkbox5"></label>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
             <div id="editEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form>
+                        <form action="/Donor/updateDonor" method="post">
                             <div class="modal-header">
                                 <h4 class="modal-title">Edit Donor</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -167,31 +167,31 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="Name" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Roll No</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="RollNo" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Phone</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="PhoneNo" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Temporary Address</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="TemporaryAddress" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Permanent Address</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="PermanentAddress" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Last Donation</label>
-                                    <input type="date" class="form-control" required>
+                                    <input type="date" name="LastDonationDate" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Blood Group</label>
-                                    <select name="bloodgroup">
+                                    <select name="BloodGroup">
                                         <option value="A Positive">A Positive</option>
                                         <option value="B Positive">B Positive</option>
                                         <option value="O Positive">O Positive</option>
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Active</label>
-                                    <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                    <input type="checkbox" id="checkbox5" name="Status" value="1">
                                     <label for="checkbox5"></label>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
             <div id="deleteEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form>
+                        <form action="/Donor/deleteDonor" method="post">
                             <div class="modal-header">
                                 <h4 class="modal-title">Delete Employee</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

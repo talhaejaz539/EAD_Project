@@ -3,139 +3,60 @@ using System.Collections.Generic;
 using Blood_Management_System.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blood_Management_System.Data;
-
-public partial class BmsContext : DbContext
+namespace Blood_Management_System.Data
 {
-    public BmsContext()
+    public class BmsContext : DbContext
     {
-    }
-
-    public BmsContext(DbContextOptions<BmsContext> options)
-        : base(options)
-    {
-    }
-
-    public virtual DbSet<BloodRequest> BloodRequests { get; set; }
-
-    public virtual DbSet<Donor> Donors { get; set; }
-
-    public virtual DbSet<Member> Members { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BMS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<BloodRequest>(entity =>
+        public BmsContext()
         {
-            entity.HasKey(e => e.Id).HasName("PK__BloodReq__3214EC07AD11FD9B");
+        }
 
-            entity.ToTable("BloodRequest");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.AttendantName)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.AttendantPhone)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Case)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.DonorContact)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.DonorName)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.HospitalName)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.PickAndDrop)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.RequestorName)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.RequestorPhone)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.RequestorRollNumber)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.RequiredBloodGroup)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.TimeAndDate).HasColumnType("datetime");
-        });
-
-        modelBuilder.Entity<Donor>(entity =>
+        public BmsContext(DbContextOptions<BmsContext> options)
+            : base(options)
         {
-            entity.HasKey(e => e.Id).HasName("PK__Donor__3214EC074E2B53BF");
+        }
 
-            entity.ToTable("Donor");
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //    => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BMS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.BloodGroup)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.LastDonationDate).HasColumnType("date");
-            entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.PermanentAddress)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.PhoneNo)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.RollNo)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Status)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.TemporaryAddress)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-        });
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            => optionsBuilder.UseSqlServer("Server=bmsdb;Database=BMS;User Id=SA;password=yourStrong(!)Password;Trusted_Connection=False;MultipleActiveResultSets=true;TrustServerCertificate=True");
 
-        modelBuilder.Entity<Member>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Member__3214EC0755BBA30D");
+        public DbSet<BloodRequest> BloodRequests { get; set; }
 
-            entity.ToTable("Member");
+        public DbSet<Donor> Donors { get; set; }
 
-            entity.Property(e => e.Designation)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.ListGroup)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Password)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Phone)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.RollNo)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Status)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-        });
+        public DbSet<Member> Members { get; set; }
 
-        OnModelCreatingPartial(modelBuilder);
+        public int userId { get; set; }
+
+        //public override int SaveChanges()
+        //{
+        //    var addedEntries = ChangeTracker.Entries().Where(e => e.State == EntityState.Added).ToList();
+        //    var updatedEntries = ChangeTracker.Entries().Where(e => e.State == EntityState.Modified).ToList();
+        //    var deletedEntries = ChangeTracker.Entries().Where(e => e.State == EntityState.Deleted).ToList();
+        //    foreach (var entry in addedEntries)
+        //    {
+        //        var temp = entry as IAudit;
+        //        temp.UserAdd = userId;
+        //        //temp.isActive = true;
+        //        temp.CreatedDate = DateTime.Now;
+        //        temp.ModifiedDate = DateTime.Now;
+        //    }
+        //    foreach (var entry in updatedEntries)
+        //    {
+        //        var temp = entry as IAudit;
+        //        temp.UserMod = userId;
+        //        temp.ModifiedDate = DateTime.Now;
+        //    }
+        //    foreach (var entry in deletedEntries)
+        //    {
+        //        var temp = entry as IAudit;
+        //        temp.UserDel = userId;
+        //        //temp.isActive = false;
+        //    }
+
+        //    return base.SaveChanges();
+        //}
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "stf3xCi500PIWOUrH3fVa7/gtZGLLzheFGAWrBFyCcM=",
+  "Hash": "aE0ZDespN6yyYrp93k7XSQ6hE7731a3Rj+KYlwujcG0=",
   "Source": "Blood_Management_System",
   "BasePath": "_content/Blood_Management_System",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\Uploads\\ss.txt",
+      "SourceId": "Blood_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\",
+      "BasePath": "_content/Blood_Management_System",
+      "RelativePath": "Uploads/ss.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\ss.txt"
     }
   ]
 }

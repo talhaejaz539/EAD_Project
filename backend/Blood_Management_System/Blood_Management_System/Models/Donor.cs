@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Blood_Management_System.Models;
 
-public partial class Donor
+public partial class Donor : Audit
 {
     public int Id { get; set; }
 
@@ -19,7 +19,7 @@ public partial class Donor
 
     public string PermanentAddress { get; set; } = null!;
 
-    public DateTime LastDonationDate { get; set; }
+    public DateTime? LastDonationDate { get; set; }
 
-    public string Status { get; set; } = null!;
+    public string? Status { get; set; }
 }

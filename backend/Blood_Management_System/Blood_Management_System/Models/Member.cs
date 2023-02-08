@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Blood_Management_System.Models;
 
-public partial class Member
+public partial class Member : Audit
 {
     public int Id { get; set; }
 
@@ -21,5 +21,5 @@ public partial class Member
 
     public string? ListGroup { get; set; }
 
-    public string Status { get; set; } = null!;
+    public string? Status { get; set; }
 }

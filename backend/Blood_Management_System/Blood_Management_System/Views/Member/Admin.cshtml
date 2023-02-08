@@ -1,6 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Admin";
 }
+
+@model List<Member>
+
+@section HeaderSection {
+    <div>
+        <h5>@ViewData["name"]</h5>
+    </div>
+}
+
 <body>
     <div class="container">
         <div class="row mt-5">
@@ -38,101 +47,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                            <label for="checkbox1"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>Talha Ejaz</td>
-                                    <td>bcsf18a539@pucit.edu.pk</td>
-                                    <td>BCSF18A539</td>
-                                    <td>03331469946</td>
-                                    <td>Preseident</td>
-                                    <td>O Positive</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox2" name="options[]" value="1">
-                                            <label for="checkbox2"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>Talha Ejaz</td>
-                                    <td>bcsf18a539@pucit.edu.pk</td>
-                                    <td>BCSF18A539</td>
-                                    <td>03331469946</td>
-                                    <td>Preseident</td>
-                                    <td>A Positive</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox3" name="options[]" value="1">
-                                            <label for="checkbox3"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>Talha Ejaz</td>
-                                    <td>bcsf18a539@pucit.edu.pk</td>
-                                    <td>BCSF18A539</td>
-                                    <td>03331469946</td>
-                                    <td>Preseident</td>
-                                    <td>O Negative</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox4" name="options[]" value="1">
-                                            <label for="checkbox4"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>Talha Ejaz</td>
-                                    <td>bcsf18a539@pucit.edu.pk</td>
-                                    <td>BCSF18A539</td>
-                                    <td>03331469946</td>
-                                    <td>Preseident</td>
-                                    <td>O Positive</td>
-                                    <td>False</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox5" name="options[]" value="1">
-                                            <label for="checkbox5"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>Talha Ejaz</td>
-                                    <td>bcsf18a539@pucit.edu.pk</td>
-                                    <td>BCSF18A539</td>
-                                    <td>03331469946</td>
-                                    <td>Preseident</td>
-                                    <td>O Positive</td>
-                                    <td>False</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
+                                @foreach(var m in Model)
+                                {
+                                    <partial name="_myPartialView" model="m" />
+                                }
                             </tbody>
                         </table>
                         <div class="clearfix">
@@ -154,7 +72,7 @@
             <div id="addEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="/Member/addMember" method="post">
+                        <form asp-action="addMember" asp-controller="Member" method="post" enctype="multipart/form-data">
                             <div class="modal-header">
                                 <h4 class="modal-title">Add Member</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -196,8 +114,12 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <label>Student Card</label>
+                                    <input type="file" name="postedFiles" />
+                                </div>
+                                <div class="form-group">
                                     <label>Active</label>
-                                    <input type="checkbox" id="checkbox5" name="Status" value="1">
+                                    <input type="checkbox" id="checkbox5" name="Status" value="Active">
                                     <label for="checkbox5"></label>
                                 </div>
                             </div>
@@ -209,8 +131,9 @@
                     </div>
                 </div>
             </div>
+
             <!-- Edit Modal HTML -->
-            <div id="editEmployeeModal" class="modal fade">
+            @*<div id="editEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <form action="/Member/updateMember" method="post">
@@ -263,12 +186,12 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div>*@
             <!-- Delete Modal HTML -->
-            <div id="deleteEmployeeModal" class="modal fade">
+            @*<div id="deleteEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="/Member/deleteMember" method="post">
+                        <form action="/Member/deleteMember/" method="post">
                             <div class="modal-header">
                                 <h4 class="modal-title">Delete Employee</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -284,7 +207,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div>*@
         </div>
     </div>
 </body>

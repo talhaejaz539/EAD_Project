@@ -2,6 +2,14 @@
     ViewData["Title"] = "Data Manager";
 }
 
+@model List<Donor>
+
+@section HeaderSection {
+    <div>
+        <h5>@ViewData["name"]</h5>
+    </div>
+}
+
 <body>
     <div class="container">
         <div class="row mt-5">
@@ -40,26 +48,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <!-- <span class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                            <label for="checkbox1"></label>
-                                        </span> -->
-                                    </td>
-                                    <td>Talha Ejaz</td>
-                                    <td>BCSF18A539</td>
-                                    <td>03331469946</td>
-                                    <td>A Positive</td>
-                                    <td>Paragon City, Lahore</td>
-                                    <td>Paragon City, Lahore</td>
-                                    <td>January 08, 2023</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                    </td>
-                                </tr>
+
+                                @foreach(var v in Model)
+                                {
+                                    <partial name="_DonorPartialView" model="v" />
+                                }
+
+                                @*
                                 <tr>
                                     <td>
                                         <!-- <span class="custom-checkbox">
@@ -79,7 +74,7 @@
                                         <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                         <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                     </td>
-                                </tr>
+                                </tr>*@
                             </tbody>
                         </table>
                         <div class="clearfix">
@@ -101,7 +96,7 @@
             <div id="addEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="/Donor/addDonor" method="post">
+                        <form asp-action="addDonor" asp-controller="Donor" method="post">
                             <div class="modal-header">
                                 <h4 class="modal-title">Add Donor</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -143,7 +138,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Active</label>
-                                    <input type="checkbox" id="checkbox5" name="Status" value="1">
+                                    <input type="checkbox" id="checkbox5" name="Status" value="Active">
                                     <label for="checkbox5"></label>
                                 </div>
                             </div>
@@ -156,63 +151,7 @@
                 </div>
             </div>
             <!-- Edit Modal HTML -->
-            <div id="editEmployeeModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form action="/Donor/updateDonor" method="post">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Edit Donor</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" name="Name" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Roll No</label>
-                                    <input type="text" name="RollNo" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Phone</label>
-                                    <input type="text" name="PhoneNo" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Temporary Address</label>
-                                    <input type="text" name="TemporaryAddress" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Permanent Address</label>
-                                    <input type="text" name="PermanentAddress" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Last Donation</label>
-                                    <input type="date" name="LastDonationDate" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Blood Group</label>
-                                    <select name="BloodGroup">
-                                        <option value="A Positive">A Positive</option>
-                                        <option value="B Positive">B Positive</option>
-                                        <option value="O Positive">O Positive</option>
-                                        <option value="AB Positive">AB Positive</option>
-                                        <option value="Rare">Rare</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Active</label>
-                                    <input type="checkbox" id="checkbox5" name="Status" value="1">
-                                    <label for="checkbox5"></label>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                <input type="submit" class="btn btn-info" value="Save">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
             <!-- Delete Modal HTML -->
             <div id="deleteEmployeeModal" class="modal fade">
                 <div class="modal-dialog">

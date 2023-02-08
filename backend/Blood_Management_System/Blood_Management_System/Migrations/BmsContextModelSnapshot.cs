@@ -25,137 +25,122 @@ namespace BloodManagementSystem.Migrations
             modelBuilder.Entity("Blood_Management_System.Models.BloodRequest", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AttendantName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AttendantPhone")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Case")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DonorContact")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DonorName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HospitalName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PickAndDrop")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RequestorName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RequestorPhone")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RequestorRollNumber")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RequiredBloodGroup")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("TimeAndDate")
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime2");
 
-                    b.HasKey("Id")
-                        .HasName("PK__BloodReq__3214EC07AD11FD9B");
+                    b.HasKey("Id");
 
-                    b.ToTable("BloodRequest", (string)null);
+                    b.ToTable("BloodRequests");
                 });
 
             modelBuilder.Entity("Blood_Management_System.Models.Donor", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BloodGroup")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("LastDonationDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LastDonationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PermanentAddress")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNo")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RollNo")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TemporaryAddress")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id")
-                        .HasName("PK__Donor__3214EC074E2B53BF");
+                    b.Property<int>("UserAdd")
+                        .HasColumnType("int");
 
-                    b.ToTable("Donor", (string)null);
+                    b.Property<int>("UserDel")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserMod")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Donors");
                 });
 
             modelBuilder.Entity("Blood_Management_System.Models.Member", b =>
@@ -166,57 +151,57 @@ namespace BloodManagementSystem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Designation")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ListGroup")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RollNo")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id")
-                        .HasName("PK__Member__3214EC0755BBA30D");
+                    b.Property<int>("UserAdd")
+                        .HasColumnType("int");
 
-                    b.ToTable("Member", (string)null);
+                    b.Property<int>("UserDel")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserMod")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Members");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,84 @@
+﻿
+@model Donor
+
+
+<tr>
+    <td>
+        <!-- <span class="custom-checkbox">
+            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+            <label for="checkbox1"></label>
+        </span> -->
+    </td>
+    <td>@Model.Name</td>
+    <td>@Model.RollNo</td>
+    <td>@Model.PhoneNo</td>
+    <td>@Model.BloodGroup</td>
+    <td>@Model.TemporaryAddress</td>
+    <td>@Model.PermanentAddress</td>
+    <td>@Model.LastDonationDate</td>
+    <td>@Model.Status</td>
+    <td>
+        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+        <a asp-action="deleteDonor" asp-controller="Donor" asp-route-id="@Model.Id" class="Delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+    </td>
+</tr>
+
+
+<div id="editEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="updateDonor" asp-controller="Donor" method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Donor</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="hidden" asp-for="Id" />
+                        <input asp-for="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Roll No</label>
+                        <input asp-for="RollNo" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input asp-for="PhoneNo" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Temporary Address</label>
+                        <input asp-for="TemporaryAddress" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Permanent Address</label>
+                        <input asp-for="PermanentAddress" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Donation</label>
+                        <input asp-for="LastDonationDate" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Blood Group</label>
+                        <select asp-for="BloodGroup">
+                            <option value="A Positive">A Positive</option>
+                            <option value="B Positive">B Positive</option>
+                            <option value="O Positive">O Positive</option>
+                            <option value="AB Positive">AB Positive</option>
+                            <option value="Rare">Rare</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Active</label>
+                        <input type="checkbox" id="checkbox5" name="Status" value="Active">
+                        <label for="checkbox5"></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-info" value="Save">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

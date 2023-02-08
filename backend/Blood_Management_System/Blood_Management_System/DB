@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+COPY ./BMS-202327-10-43-36.bak /src/
+
+COPY ./BMS.mdf /src/
+
+COPY BMS_log.ldf /src/

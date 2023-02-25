@@ -42,6 +42,9 @@ namespace BloodManagementSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("DonorContact")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -53,6 +56,9 @@ namespace BloodManagementSystem.Migrations
                     b.Property<string>("HospitalName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("PickAndDrop")
                         .IsRequired()
@@ -76,6 +82,18 @@ namespace BloodManagementSystem.Migrations
 
                     b.Property<DateTime>("TimeAndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("UserAdd")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserDel")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserMod")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -195,6 +213,10 @@ namespace BloodManagementSystem.Migrations
 
                     b.Property<int?>("UserMod")
                         .HasColumnType("int");
+
+                    b.Property<string>("fileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
                         .HasColumnType("bit");

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aE0ZDespN6yyYrp93k7XSQ6hE7731a3Rj+KYlwujcG0=",
+  "Hash": "Q+48iB/B0FCmIvD3ZdfDa8EIi00AleoO6eOIBp+3TMM=",
   "Source": "Blood_Management_System",
   "BasePath": "_content/Blood_Management_System",
   "Mode": "Default",
@@ -1105,12 +1105,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\Uploads\\ss.txt",
+      "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\Uploads\\3.jpg",
       "SourceId": "Blood_Management_System",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\",
       "BasePath": "_content/Blood_Management_System",
-      "RelativePath": "Uploads/ss.txt",
+      "RelativePath": "Uploads/3.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1119,7 +1119,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\ss.txt"
+      "OriginalItemSpec": "wwwroot\\Uploads\\3.jpg"
+    },
+    {
+      "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\Uploads\\Default.jpg",
+      "SourceId": "Blood_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\",
+      "BasePath": "_content/Blood_Management_System",
+      "RelativePath": "Uploads/Default.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Default.jpg"
+    },
+    {
+      "Identity": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\Uploads\\Hussam.jpg",
+      "SourceId": "Blood_Management_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PUCIT\\7th Semester\\EAD\\Project\\EAD_Project\\backend\\Blood_Management_System\\Blood_Management_System\\wwwroot\\",
+      "BasePath": "_content/Blood_Management_System",
+      "RelativePath": "Uploads/Hussam.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Hussam.jpg"
     }
   ]
 }

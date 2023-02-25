@@ -14,6 +14,14 @@ namespace Blood_Management_System.Controllers
 
         }
 
+        //public ViewResult Edit(int id)
+        //{
+        //    MemberRepository memberRepository = new MemberRepository();
+        //    Member m = memberRepository.dataMember(id);
+        //    return View("Edit", m);
+
+        //}
+
         public IActionResult Admin()
         {
 
@@ -25,6 +33,7 @@ namespace Blood_Management_System.Controllers
                 name = HttpContext.Request.Cookies["nameOfUser"];
             //Console.WriteLine(name);
             ViewData["name"] = name;
+            //ViewBag.info = "3.jpg";
 
             MemberRepository memberRepository = new MemberRepository();
             List<Member> members = new List<Member>();
@@ -52,18 +61,20 @@ namespace Blood_Management_System.Controllers
                 Directory.CreateDirectory(path);
             }
 
+            var fileName = Path.GetFileName(postedFiles.FileName);
+            Console.WriteLine(fileName);
+            var pathWithFileName = Path.Combine(path, fileName);
+            using (FileStream stream = new FileStream(pathWithFileName, FileMode.Create))
+            {
+                postedFiles.CopyTo(stream);
+            }
             //foreach (var file in postedFile)
             //{
-                var fileName = Path.GetFileName(postedFiles.FileName);
-                var pathWithFileName = Path.Combine(path, fileName);
-                using (FileStream stream = new FileStream(pathWithFileName, FileMode.Create))
-                {
-                    postedFiles.CopyTo(stream);
-                    //ViewBag.Message = "File Uploaded Successfully";
-                }
+            //ViewBag.Message = "File Uploaded Successfully";
             //}
 
             MemberRepository memberRepository = new MemberRepository();
+            m.fileName = fileName;
             memberRepository.signUp(m);
 
             return RedirectToAction("Admin");

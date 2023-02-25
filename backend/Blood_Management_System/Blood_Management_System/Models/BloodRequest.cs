@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Blood_Management_System.Models;
 
-public partial class BloodRequest
+public partial class BloodRequest : Audit
 {
     public int Id { get; set; }
 

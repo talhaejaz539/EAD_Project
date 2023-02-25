@@ -9,7 +9,6 @@ namespace Blood_Management_System.Controllers
     {
         public IActionResult Index()
         {
-            HttpContext.Response.Cookies.Delete("nameOfUser");
             return View();
         }
 
@@ -45,10 +44,6 @@ namespace Blood_Management_System.Controllers
                 //return RedirectToAction("Index");
             }
 
-
-
-
-
             //if (HttpContext.Request.Cookies.ContainsKey("nameOfUser"))
             //{
             //    string firstVisitedDateTime = HttpContext.Request.Cookies["nameOfUser"];
@@ -67,6 +62,7 @@ namespace Blood_Management_System.Controllers
 
         public IActionResult Logout()
         {
+            HttpContext.Response.Cookies.Delete("nameOfUser");
             return RedirectToAction("Index");
         }
     }

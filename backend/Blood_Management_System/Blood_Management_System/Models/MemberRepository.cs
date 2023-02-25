@@ -61,5 +61,13 @@ namespace Blood_Management_System.Models
             bmsContext.Members.Remove(m);
             bmsContext.SaveChanges();
         }
+
+        //public Member dataMember(int id)
+        //{
+        //    BmsContext bmsContext = new BmsContext();
+        //    Member m = new Member { Id = id };
+        //    bmsContext.Members.Where(m);
+        //    return m;
+        //}
     }
 }

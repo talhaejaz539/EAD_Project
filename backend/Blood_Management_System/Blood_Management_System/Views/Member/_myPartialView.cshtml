@@ -2,12 +2,13 @@
 @model Member
 
 <tr>
-    <td>
+    @*<td>
         <!-- <span class="custom-checkbox">
             <input type="checkbox" id="checkbox1" name="options[]" value="1">
             <label for="checkbox1"></label>
         </span> -->
-    </td>
+    </td>*@
+    <td><img class="rounded" width="30" height="30" src="/Uploads/@Model.fileName"/></td>
     <td>@Model.Name</td>
     <td>@Model.Email</td>
     <td>@Model.RollNo</td>
@@ -16,7 +17,7 @@
     <td>@Model.ListGroup</td>
     <td>@Model.Status</td>
     <td>
-        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="modal" asp-route-id="@Model.Id" title="Edit">&#xE254;</i></a>
+        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="modal" title="Edit">&#xE254;</i></a>
         <a asp-action="deleteMember" asp-controller="Member" asp-route-id="@Model.Id" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
     </td>
 </tr>
@@ -56,10 +57,10 @@
                     <div class="form-group">
                         <label>List Group</label>
                         <select asp-for="ListGroup">
-                            <option value="APositive">A Positive</option>
-                            <option value="BPositive">B Positive</option>
-                            <option value="OPositive">O Positive</option>
-                            <option value="ABPositive">AB Positive</option>
+                            <option value="A Positive">A Positive</option>
+                            <option value="B Positive">B Positive</option>
+                            <option value="O Positive">O Positive</option>
+                            <option value="AB Positive">AB Positive</option>
                             <option value="Rare">Rare</option>
                             <option value="None">None</option>
                         </select>

@@ -21,5 +21,7 @@ public partial class Member : Audit
 
     public string? ListGroup { get; set; }
 
+    public string fileName { get; set; } = null!;
+
     public string? Status { get; set; }
 }
